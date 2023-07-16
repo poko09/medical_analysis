@@ -1,0 +1,10 @@
+;;;;;;
+;Classification ;Report: ;;;;
+;               ;precision    ;recall  ;f1-score   ;support;
+;;;;;;
+;0;    0.77     ; 0.81   ;   0.79    ;234;
+;1;    0.45     ; 0.40   ;   0.42    ;93;
+;;;;;;
+;    accuracy   ;             ;        ;   0.69    ;327;
+;   macro avg   ;    0.61     ; 0.60   ;   0.61    ;327;
+;weighted avg   ;    0.68     ; 0.69   ;   0.68    ;327;

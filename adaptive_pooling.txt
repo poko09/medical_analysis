@@ -1,0 +1,36 @@
+
+# Jak ma wyglądać ten adaptive pooling?
+
+
+# import numpy as np
+# import os
+# from PIL import Image
+# import torch
+# import torch.nn as nn
+
+# def store_pictures(dir_path):
+#     images = []
+#     for filename in os.listdir(dir_path):
+#         if filename.endswith('.jpeg'):
+#             img = Image.open(os.path.join(dir_path, filename))
+
+#             # zmieńmy rozmiar obrazu do (128, 128) dla przykładu
+#             small_img = img.resize((128, 128), Image.BILINEAR)
+            
+#             # konwersja do numpy array i normalizacja do przedziału [0, 1]
+#             img_array = np.array(small_img) / 255.0
+
+#             # konwersja do PyTorch tensora
+#             img_tensor = torch.from_numpy(img_array)
+
+#             # dodajemy dodatkowe wymiary
+#             img_tensor = img_tensor.unsqueeze(0).unsqueeze(0)
+
+#             # adaptive pooling
+#             pool = nn.AdaptiveMaxPool2d(1)
+#             output = pool(img_tensor)
+            
+#             print(output.shape)  # powinno zwrócić [1, 1, 1, 1]
+#             images.append(output.numpy())
+            
+#     return images
